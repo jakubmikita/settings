@@ -38,6 +38,14 @@
 
 				<input type="hidden" name="action" value="save_<?php echo $this->handle; ?>_settings">
 
+				<?php
+				/**
+				 * When you have only checkboxed in the section, no data in POST is returned. This fields adds a dummy value
+				 * for form handler so it could grab the section name and parse all defined fields
+				 */
+				?>
+				<input type="hidden" name="<?php echo $this->handle . '_settings[' . $section->slug() . ']' ?>" value="section_buster">
+
 				<?php $groups  = $section->get_groups(); ?>
 
 				<?php foreach ( $groups as $group ): ?>
