@@ -74,7 +74,7 @@
 										$field_description = $field->description();
 										?>
 										<?php if ( ! empty( $field_description ) ): ?>
-											<p><?php echo esc_html( $field_description ); ?></p>
+											<p><?php echo $field_description; ?></p>
 										<?php endif ?>
 									</td>
 								</tr>
