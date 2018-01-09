@@ -2,3 +2,5 @@
 *.sublime-workspace
 docker-compose.yml
 public
+node_modules
+yarn.lock
